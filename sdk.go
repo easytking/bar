@@ -2,7 +2,9 @@
 * @Author qrTang
 * @Date 2022/1/12
 **/
-package bar
+package main
+
+import "fmt"
 
 type Sdk struct {
 	Foo string
@@ -14,4 +16,8 @@ func NewSdk() Sdk {
 		Foo: "abc",
 		Bar: "123",
 	}
+}
+
+func (s Sdk)Start()  {
+	fmt.Println("bar.sdk.starting")
 }
