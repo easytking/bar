@@ -1,15 +1,15 @@
 
-name: Go Test
+name: Go Demo
 
 on: [push, pull_request]
 
 jobs:
 
-  helloci-build:
+  democi-build:
     name: Test with go ${{ matrix.go_version }} on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     environment:
-      name: helloci
+      name: democi
 
     strategy:
       matrix:
@@ -33,4 +33,4 @@ jobs:
 
       - name: Build
         run: |
-          go build -v -o helloci .
+          go build -v -o democi .
